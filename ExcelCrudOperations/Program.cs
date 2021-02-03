@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using OfficeOpenXml;
+
 
 namespace ExcelCrudOperations
 {
@@ -14,7 +14,7 @@ namespace ExcelCrudOperations
     {
         static void Main(string[] args)
         {
-            //ReadExcelFile();
+            ReadExcelFile.ReadExcel();
             //CreateExcelFile.WriteExcelFile();
             //Delete.UpdateExcelUsingOpenXMLSDK();
             //string docName = @"c:\ExcelSample\RK_Excel1.xlsx";
@@ -23,11 +23,11 @@ namespace ExcelCrudOperations
             //uint rowIndex = 4;
             //DeleteTextFromCell(docName, sheetName, colName, rowIndex);
         
-                FileInfo fileInfo = new FileInfo(@"c:\ExcelSample\RK_Excel1.xlsx");
-                ExcelPackage p = new ExcelPackage(fileInfo);
-                ExcelWorksheet myWorksheet = p.Workbook.Worksheets["Sheet1"];
-                myWorksheet.Cells[4, 2].Value = 10;
-                p.Save();
+                //FileInfo fileInfo = new FileInfo(@"c:\ExcelSample\RK_Excel1.xlsx");
+                //ExcelPackage p = new ExcelPackage(fileInfo);
+                //ExcelWorksheet myWorksheet = p.Workbook.Worksheets["Sheet1"];
+                //myWorksheet.Cells[4, 2].Value = 10;
+                //p.Save();
 
         }
         // Given a document, a worksheet name, a column name, and a one-based row index,
