@@ -19,7 +19,8 @@ namespace ExcelCrudOperations
     {
         static void Main(string[] args)
         {
-            CreateExcelFile.WriteExcelFile();
+            //CreateExcelFile.WriteExcelFile();
+            ReadExcelFile.ReadExcel();
         }
     }
 }
