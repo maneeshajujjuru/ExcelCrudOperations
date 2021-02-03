@@ -27,7 +27,7 @@ namespace ExcelCrudOperations
             // Datatable is most easy way to deal with complex datatypes for easy reading and formatting. 
             DataTable table = (DataTable)JsonConvert.DeserializeObject(JsonConvert.SerializeObject(persons), (typeof(DataTable)));
 
-            using (SpreadsheetDocument document = SpreadsheetDocument.Create(@"c:\ExcelSample\RK_Excel1.xlsx", SpreadsheetDocumentType.Workbook))
+            using (SpreadsheetDocument document = SpreadsheetDocument.Create(@"c:\ExcelSample\RK_Excel.xlsx", SpreadsheetDocumentType.Workbook))
             {
                 WorkbookPart workbookPart = document.AddWorkbookPart();
                 workbookPart.Workbook = new Workbook();
@@ -71,6 +71,7 @@ namespace ExcelCrudOperations
                 }
 
                 workbookPart.Workbook.Save();
+                Console.WriteLine("Excel Data Created Successfully");
             }
         }
     }
