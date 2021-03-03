@@ -21,13 +21,14 @@ namespace ExcelCrudOperations
                new UserDetails() {ID="1002", Name="PQRS", City ="City2", Country="INDIA"},
                new UserDetails() {ID="1003", Name="XYZZ", City ="City3", Country="CHINA"},
                new UserDetails() {ID="1004", Name="LMNO", City ="City4", Country="UK"},
+
           };
 
             // Lets converts our object data to Datatable for a simplified logic.
             // Datatable is most easy way to deal with complex datatypes for easy reading and formatting. 
             DataTable table = (DataTable)JsonConvert.DeserializeObject(JsonConvert.SerializeObject(persons), (typeof(DataTable)));
 
-            using (SpreadsheetDocument document = SpreadsheetDocument.Create(@"c:\ExcelSample\RK_Excel.xlsx", SpreadsheetDocumentType.Workbook))
+            using (SpreadsheetDocument document = SpreadsheetDocument.Create(@"c:\ExcelSample\Sample.xlsx", SpreadsheetDocumentType.Workbook))
             {
                 WorkbookPart workbookPart = document.AddWorkbookPart();
                 workbookPart.Workbook = new Workbook();
